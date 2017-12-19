@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style/style.css">
     <style>
         .bg_head {
-            height: 800px;
+            height: 100%;
             border: 1px solid #999;
             background-color: #ccc;
         }
@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" style="height:100%">
         <div class="row">
             <!-- 左侧栏-statr -->
             <div class="col-md-3 bg_head">
@@ -67,132 +67,499 @@
                 </div>
                 <!-- 表格字段-end -->
                 <!-- 内容-start -->
-                <div class="row">
-                    <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                        <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                    </div>
-                    <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                        <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                            <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                        <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                        <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                            </a>
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                            </a>
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                            </a>
+                <div class="row" >
+                    <div class="col-md-12 pre-scrollable" style="overflow-x:hidden;">
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                        <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                        <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                        <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                    </div>
-                    <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                        <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                            <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                        <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                        <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                            </a>
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                            </a>
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                            </a>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                        <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                        <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                        <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                    </div>
-                    <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                        <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                            <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                        <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                        <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                            </a>
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                            </a>
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                            </a>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                        <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                        <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                        <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                    </div>
-                    <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                        <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                            <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                        </a>
-                    </div>
-                    <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                        <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                        <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                            </a>
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                            </a>
-                            <a href="#" style="text-decoration : none;">
-                                <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                            </a>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                        <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                        <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
+                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
+                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
+                                    </a>
+                                    <a href="#" style="text-decoration : none;">
+                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
+                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!-- 内容-end -->
