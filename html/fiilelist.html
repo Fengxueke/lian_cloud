@@ -4,6 +4,8 @@
     <title>全部文件</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style/style.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+    <script type="text/javascript" src="js/cloud.js" ></script>
     <style>
         .bg_head {
             height: 100%;
@@ -44,31 +46,38 @@
                     <div class="col-md-12 bg_main" style="height:100px">头</div>
                 </div>
                 <!-- 搜索框/下载/上传/按钮-end -->
+                <!-- xx -->
+                <div class="row"  style="overflow-x:hidden;overflow-y: scroll;">
+                <div class="col-md-12">
                 <!-- 表格字段-start -->
                 <div class="row">
-                    <div class="col-md-1 bg_main center-block" style="height:30px;width:30px;padding:8px">
-                        <input type="checkbox" class="checkbox" style="display:block;margin:0" />
-                    </div>
-                    <div class="col-md-1 bg_main center-block" style="height:30px;width:60px;position:relative;">
-                        <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">图标</a>
-                    </div>
-                    <div class="col-md-5 bg_main" style="height:30px;position:relative;">
-                        <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:30px;position:relative;">
-                        <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">操作</a>
-                    </div>
-                    <div class="col-md-1 bg_main" style="height:30px;position:relative;">
-                        <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">大小</a>
-                    </div>
-                    <div class="col-md-2 bg_main" style="height:30px;position:relative;">
-                        <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">修改日期</a>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-1 bg_main center-block" style="height:30px;width:30px;padding:8px">
+                                <input type="checkbox" class="checkbox" style="display:block;margin:0" />
+                            </div>
+                            <div class="col-md-1 bg_main center-block" style="height:30px;width:60px;position:relative;">
+                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">图标</a>
+                            </div>
+                            <div class="col-md-5 bg_main" style="height:30px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:30px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">操作</a>
+                            </div>  
+                            <div class="col-md-1 bg_main" style="height:30px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">大小</a>
+                            </div>
+                            <div class="col-md-2 bg_main" style="height:30px;position:relative;">
+                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">修改日期</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- 表格字段-end -->
                 <!-- 内容-start -->
-                <div class="row" >
-                    <div class="col-md-12 pre-scrollable" style="overflow-x:hidden;">
+                <div class="row" id="scolls">
+                    <div class="col-md-12" id="md12">
                         <div class="row">
                             <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
                                 <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
@@ -563,6 +572,8 @@
                     </div>
                 </div>
                 <!-- 内容-end -->
+            </div>
+        </div>
             </div>
         </div>
     </div>
