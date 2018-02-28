@@ -1,0 +1,200 @@
+/* 临时正题样式 -start */
+.bg_head {
+    height: 100%;
+    /* background-color: #ccc; */
+    border:1px solid #cccccc; 
+    border-style: none none none solid;
+}
+
+.bg_main {
+    border: 1px solid #999;
+    /* background-color: #ccc; */
+}
+
+.bg_shangpin {
+    height: 210px;
+    border: 1px solid #999;
+    background-color: #ccc;
+}
+
+.bg_daohang {
+    height: 50px;
+    border: 1px solid #999;
+    background-color: #ccc;
+}
+
+/* 临时正题样式 -end */
+
+
+/* 左侧栏-start */
+.main_left_usr{
+    padding:0;height:100%
+}
+#user_area_icon a img{
+    border:1px solid black;
+}
+/* 左侧栏-end */
+
+/* 右侧栏-start */
+/* 搜索框 区域边框 */
+.main_right_xtop{
+    height: 100%;
+    border:1px solid #cccccc; 
+    border-style: none none solid none;
+}
+
+/* 内容区域-表头 */
+.main_right_theader{
+    border:1px solid #cccccc; 
+    border-style: solid none solid none;
+}
+
+/* 内容区域-表格 */
+.main_right_tb{
+    border:1px solid #cccccc; 
+    border-style: none none solid none;
+}
+
+/* 右侧栏-end */
+
+/* 文件-滚动条 */
+#scolls{
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+#scolls::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+#scolls::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #8F8F8F;
+}
+
+#scolls::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+
+/* 文件-表格/header/字段的文字部分 */
+.file-head{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration : none
+}
+
+/* 文件-表格header部分 -start */
+.t-header-checkbox{
+    height:30px;
+    width:30px;
+    padding:8px;
+    border:1px solid #cccccc; 
+    border-style: none solid none none
+}
+.t-header-checkbox input{
+    display:block;margin:0
+}
+.t-header-icon{
+    height:30px;
+    width:60px;
+    position:relative;
+    border:1px solid #cccccc; 
+    border-style: none solid none none
+
+}
+.t-header-2{
+    height:30px;position:relative;
+    border:1px solid #cccccc; 
+    border-style: none solid none none
+}
+.t-header-3{
+    height:30px;position:relative;
+}
+/* 文件-表格header部分 -end */
+
+/* 文件-内容部分 start */
+.t-body-checkbox{
+    height:50px;width:30px;padding:8px;position:relative;
+    border:1px solid #cccccc; 
+    border-style: none dotted none none
+}
+.t-body-checkbox input{
+    position: absolute;top: 50%;transform: translateY(-50%);margin:0
+}
+.t-body-icon{
+    height:50px;width:60px;position:relative;
+    border:1px solid #cccccc; 
+    border-style: none dotted none none
+}
+.t-body-icon a{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration : none
+}
+.t-body-icon a span{
+    font-size:24px
+}
+.t-body-file-e{
+    height:50px;position:relative;
+    border:1px solid #cccccc; 
+    border-style: none dotted none none
+}
+.t-body-file-e2{
+    height:50px;position:relative;
+}
+.t-body-operate a{
+    text-decoration : none;
+}
+.t-body-operate a span{
+    font-size:15px
+}
+.t-body-size_time{
+    position: absolute;top: 50%;transform: translateY(-50%)
+}
+/* 文件-内容部分 end */
+
+/* 垂直居中 */
+.e_vertical{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration : none
+}
+/* 去除圆角，黑色边框 */
+.rm_broder_r{
+    border-radius: 0;border:1px solid black;
+}
+/* 去除圆角，无边框 */
+.rm_broder_rn{
+    border-radius: 0;
+    border:0 none;
+}
+/* 重写的按钮组圆角 */
+.list-group-item:first-child{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+/* 按钮组样式*/
+.file_kind_btn{
+    border-radius: 0;
+    border:1px solid #cccccc; 
+    border-style: solid none solid none;
+    background: #EDEDED;
+    margin-bottom: 20px;
+}
+
+/* 垂直居中 user icon*/
+.e_vertical_user{
+    position: relative;
+    top: 50%;
+    text-decoration : none
+}

@@ -4,579 +4,1037 @@
     <title>全部文件</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style/style.css">
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
-    <script type="text/javascript" src="js/cloud.js" ></script>
-    <style>
-        .bg_head {
-            height: 100%;
-            border: 1px solid #999;
-            background-color: #ccc;
-        }
-
-        .bg_main {
-            border: 1px solid #999;
-            background-color: #ccc;
-        }
-
-        .bg_shangpin {
-            height: 210px;
-            border: 1px solid #999;
-            background-color: #ccc;
-        }
-
-        .bg_daohang {
-            height: 50px;
-            border: 1px solid #999;
-            background-color: #ccc;
-        }
-    </style>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/cloud.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid" style="height:100%">
+    <div class="container-fluid" style="overflow: hidden;">
         <div class="row">
             <!-- 左侧栏-statr -->
-            <div class="col-md-3 bg_head">
+            <div class="col-md-2 main_left_usr" id="user_area">
+                用户区域
+                <div id="user_area_top" style="padding:15%">
+                    <div class="thumbnail e_vertical_user rm_broder_rn" id="user_area_icon">
+                        <a href="#">
+                            <img src="img/tx.jpg" alt="...">
+                        </a>
+                        <div class="caption" align="center" id="user_area_text">
+                            <a href="#">xxx</a>，欢迎你
+                        </div>
+                    </div>
 
+                </div>
+                <div class="bg_mxain" id="user_area_down">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">文档</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">图片</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">压缩包</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">音乐</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">视频</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">其他</button>
+                    </div>
+                </div>
             </div>
             <!-- 左侧栏-end -->
-            <div class="col-md-9 bg_head">
+            <div class="col-md-10 bg_head" id="t-head">
                 <!-- 搜索框/下载/上传/按钮-start -->
                 <div class="row">
-                    <div class="col-md-12 bg_main" style="height:100px">头</div>
+                    <div class="col-md-12" style="height:100px">
+                        <div class="row">
+                            <div class="col-md-5" style="height:99px; padding-left: 10px">
+                                <div style="line-height: 175px;">
+                                    面包屑>1212>hahah
+                                </div>
+
+                            </div>
+                            <div class="col-md-3" style="height:99px">
+
+                                <div class="input-group e_vertical">
+                                    <input type="text" class="form-control rm_broder_r" aria-label="...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default rm_broder_r" type="button">
+                                            <span class="glyphicon glyphicon-search" style="font-size:20px"></span>
+                                        </button>
+                                    </span>
+
+                                </div>
+                                <!-- /input-group -->
+
+                            </div>
+                            <div class="col-md-4 bg_xmain " style="height:99px">
+                                <button class="btn btn-default  e_vertical rm_broder_r" type="button">
+                                    新建文件夹
+                                </button>
+                                <button class="btn btn-default  e_vertical rm_broder_r" type="button">
+                                    文件上传
+                                </button>
+                                <button class="btn btn-default  e_vertical rm_broder_r" type="button">
+                                    下载
+                                </button>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
                 <!-- 搜索框/下载/上传/按钮-end -->
                 <!-- xx -->
-                <div class="row"  style="overflow-x:hidden;overflow-y: scroll;">
-                <div class="col-md-12">
-                <!-- 表格字段-start -->
                 <div class="row">
                     <div class="col-md-12">
+                        <!-- 表格字段-start -->
                         <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:30px;width:30px;padding:8px">
-                                <input type="checkbox" class="checkbox" style="display:block;margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:30px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">图标</a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:30px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:30px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">操作</a>
-                            </div>  
-                            <div class="col-md-1 bg_main" style="height:30px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">大小</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:30px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">修改日期</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 表格字段-end -->
-                <!-- 内容-start -->
-                <div class="row" id="scolls">
-                    <div class="col-md-12" id="md12">
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
+                            <div class="col-md-12 main_right_theader">
+                                <div class="row" id="md12">
+                                    <div class="col-md-1 center-block t-header-checkbox">
+                                        <input type="checkbox" class="checkbox" />
+                                    </div>
+                                    <div class="col-md-1 center-block t-header-icon">
+                                        <a href="#" class="file-head">图标</a>
+                                    </div>
+                                    <div class="col-md-5 t-header-2">
+                                        <a href="#" class="center-block file-head">文件名</a>
+                                    </div>
+                                    <div class="col-md-2 t-header-2">
+                                        <a href="#" class="center-block file-head">操作</a>
+                                    </div>
+                                    <div class="col-md-1 t-header-2">
+                                        <a href="#" class="center-block file-head">大小</a>
+                                    </div>
+                                    <div class="col-md-2 t-header-3">
+                                        <a href="#" class="center-block file-head">修改日期</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:30px;padding:8px;position:relative;">
-                                <input type="checkbox" class="checkbox" style="position: absolute;top: 50%;transform: translateY(-50%);margin:0" />
-                            </div>
-                            <div class="col-md-1 bg_main center-block" style="height:50px;width:60px;position:relative;">
-                                <a href="#" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none">
-                                    <span class="glyphicon glyphicon-picture" style="font-size:24px"></span>
-                                </a>
-                            </div>
-                            <div class="col-md-5 bg_main" style="height:50px;position:relative;">
-                                <a href="#" class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">文件名</a>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <div style="position: absolute;top: 50%;transform: translateY(-50%);text-decoration : none;">
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-star" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-download" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-share" style="font-size:15px"></span>
-                                    </a>
-                                    <a href="#" style="text-decoration : none;">
-                                        <span class="glyphicon glyphicon-option-horizontal" style="font-size:15px"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-1 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">20.00MB</span>
-                            </div>
-                            <div class="col-md-2 bg_main" style="height:50px;position:relative;">
-                                <span class="center-block" style="position: absolute;top: 50%;transform: translateY(-50%)">2017-12-12 12:12</span>
-                            </div>
-                        </div>
+                            <div class="col-md-12">
+                                <!-- 表格字段-end -->
+                                <!-- 内容-start -->
+                                <div class="row" id="">
+                                    <div class="col-md-12" id="scolls">
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb" id="md-scroll">
+                                            <div class="col-md-1 center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1 center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5 t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb">
+                                            <div class="col-md-1  center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-md-1  center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-5  t-body-file-e">
+                                                <a href="#" class="center-block file-head">文件名</a>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-download"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1  t-body-file-e">
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2  t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                </div>
+                                <!-- 内容-end -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- 内容-end -->
             </div>
-        </div>
-            </div>
-        </div>
-    </div>
 </body>
 <script src="js/bootstrap.js"></script>
 
