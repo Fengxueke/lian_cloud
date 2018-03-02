@@ -1,11 +1,11 @@
 $(window).ready(function () {
     $("#scolls").css({ "max-height": ($(window).height() - 101 - $("#md12").height()) + "px" });
     //$("#theader").css("width", $("#scolls").width() - gdtkd + "px");
-    $("#md12").css("width", $("#md-scroll").width() + "px");
+    $("#md12").css("width", $(".md-scroll").width() + "px");
     //console.log("滚动条大小-->", gdtkd);
     console.log("滚动区域宽度-scolls->", $("#scolls").width());
     console.log("表头区域宽度-md12->", $("#md12").width());
-    console.log("表头区域宽度-md-scroll->", $("#md-scroll").width());
+    console.log("表头区域宽度-md-scroll->", $(".md-scroll").width());
     // console.log("滚动区域宽度scollswidth-->", scollswidth);
     // console.log("滚动区域宽度rowswidth-->", rowswidth);
     
@@ -28,11 +28,11 @@ $(window).resize(function () {
     $("#scolls").css({ "max-height": ($(window).height() - 101 - $("#md12").height()) + "px" });
    // $("#user_area").css({ "height": ($(window).height() - 101 - $("#md12").height()) + "px" });
     //让表头宽度与有滚动条的内容部分的宽度保持一致
-    $("#md12").css("width", $("#md-scroll").width() + "px");
+    $("#md12").css("width", $(".md-scroll").width() + "px");
     // console.log("滚动条大小-->", gdtkd);
     // console.log("滚动区域宽度-scolls->", $("#scolls").width());
     // console.log("表头区域宽度-md12->", $("#md12").width());
-    // console.log("表头区域宽度-md-scroll->", $("#md-scroll").width());
+    // console.log("表头区域宽度-md-scroll->", $(".md-scroll").width());
     // console.log("滚动区域宽度scollswidth-->", scollswidth);
     // console.log("滚动区域宽度rowswidth-->", rowswidth)
     // //计算用户区域上
