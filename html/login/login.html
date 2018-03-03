@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <meta charset=UTF-8 />
+    <title>登陆</title>
+    <link rel="stylesheet" href="../rescourses/css/bootstrap.css">
+    <link rel="stylesheet" href="../rescourses/style/style.css">
+    <script type="text/javascript" src="../rescourses/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../rescourses/js/cloud.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-static-top rm_broder_rb" style="background-color: #ffffff;min-width: 800px;">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="margin-left: 50px">
+                    <li style="display:block; margin:0">
+                        <a href="#" style="display: block; padding:0">
+                            <img src="../rescourses/img/download.png" alt="...">
+                        </a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+
+                </form>
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 90px;">
+                    <li id="li_w">
+                        <a href="#">桌面版</a>
+                    </li>
+                    <li>
+                        <a href="#">手机版</a>
+                    </li>
+                    <li>
+                        <a href="#">帮助</a>
+                    </li>
+                    <li>
+                        <a href="#" class="kx" id="a_login" data-toggle="popover">登陆</a>
+                    </li>
+                    <li>
+                        <a href="#">注册</a>
+                    </li>
+                    <div id="lo_popover">
+                            <div id="popover_content_wrapper" class="popover bottom">
+                                <div class="arrow arrow-border"></div>
+                                <div class="arrow"></div>
+                                <div class="popover-content">
+                                    <form class="form-horizontal">
+                                        <br/>
+                                        <div class="form-group ">
+                                            <label for="inputEmail3" class="col-xs-3 control-label " style="padding-right:0">账号：</label>
+                                            <div class="col-xs-9 " style="padding-left:0">
+                                                <input type="email" class="form-control rm_broder_r " id="inputEmail3" placeholder="邮箱">
+                                            </div>
+                                        </div>
+                                        <div class="form-group " style="margin-bottom: 0">
+                                            <label for="inputPassword3" class="col-xs-3 control-label " style="padding-right:0">密码：</label>
+                                            <div class="col-xs-9 " style="padding-left:0">
+                                                <input type="password" class="form-control rm_broder_r " id="inputPassword3" placeholder="密码">
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <div class="col-sm-offset-2 col-sm-10 ">
+                                                <div class="checkbox ">
+                                                    <label class="">
+                                                        <input type="checkbox" class=""> 保持登陆状态
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <div class="col-xs-offset-2 col-xs-4 ">
+                                                <button type="submit" class="btn btn-default rm_broder_r ">登陆</button>
+                                            </div>
+                                            <a href="#" style="line-height: 30px;font-size: 16px" class="">忘记密码？</a>
+                                        </div>
+                                    </form>
+                                </div>
+                    
+                            </div>
+                        </div>
+
+                </ul>
+                
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+
+
+</body>
+<script src="../rescourses/js/bootstrap.js"></script>
+<script>
+    // $(function () {
+    //     $('#a_login').popover({
+    //         html: true,
+    //         content: function () {
+
+    //             return $('#popover_content_wrapper').html();
+
+    //         },
+    //         container: 'body'
+
+
+    //     });
+    //     $("#popover_content_wrapper").click(function (e) {
+    //         e.stopPropagation()
+    //     });
+    //     $("body").click(function (e) {
+    //         $('[data-toggle="popover"]').popover("hide")
+    //     });
+    //     $("#a_login").click(function (e) {
+    //         e.preventDefault(),e.stopPropagation(), $('[data-toggle="popover"]').popover("show")
+    //     });
+    // });
+
+
+    // $(function(){
+    //     $("#a_login").popover({
+    //         html: true,
+    //         content: function () {
+    //             return $('#popover_content_wrapper').html(); // 把content变成html
+    //         },
+    //         container: 'body'
+    //     });
+    //     $("#a_login").click(function (event) {
+    //               // 当点击一个按钮的时候把其他的所有内容先关闭。
+    //         $(this).popover('toggle');          // 然后只把自己打开。
+    //     }).on('shown.bs.popover',function(event){
+    //         var that = this;
+    //         var target = $(event.target);
+    //         if(!target.hasClass("")){
+
+    //         }
+    //     });
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').click(function (e) {
+            e.stopPropagation(), $(this).popover("show")
+        }),
+            $("body").click(function (e) {
+                $('[data-toggle="popover"]').popover("hide")
+            }),
+            $("#popover_content_wrapper").click(function (e) {
+                e.stopPropagation()
+            }),
+            $(document.body).on("click", function (e) {
+                $("#popover_content_wrapper").hide()
+            }),
+            $("#a_login").click(function (e) {
+                e.preventDefault(), e.stopPropagation(), $("#popover_content_wrapper").show(), $("#login_email").focus()
+            });
+        var e_p = $("#a_login").offset(),
+            s_p = $("#popover_content_wrapper").width(),
+            e_w = $("#a_login").innerHeight(),
+            e_w2 = $("#a_login").height(),
+            p_p = $("#lo_popover").offset();
+        // console.log("e_login--outerWidth-->"+ signupWidth);
+        // console.log("a_login--outerWidth-->"+ loginWidth);
+        console.log("e_p_x-->" + (e_p.top-p_p.top));
+        console.log("e_p_y-->" + s_p);
+        $("#lo_popover").css({
+            left: (e_p.left - p_p.left + e_w*0.5) - s_p*0.5 + "px",top:35 + "px"
+        })
+
+    });
+
+
+        // ;
+        // $('body').click(function (event) {
+        //     var target = $(event.target);       // 判断自己当前点击的内容
+        //     if (!target.hasClass('popover')
+        //             && !target.hasClass('kx')
+        //             && !target.hasClass('popover-content')
+        //             && !target.hasClass('loginpanel')
+        //             && !target.hasClass('arrow')
+        //             //覆盖所有面板class
+        //             && !target.hasClass("")
+        //         ) {
+        //         $('#a_login').popover('hide');      // 当点击body的非弹出框相关的内容的时候，关闭所有popover
+        //     }
+        // });
+
+   // });
+
+</script>
+
+
+</html>

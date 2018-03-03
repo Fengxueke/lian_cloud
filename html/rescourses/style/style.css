@@ -173,6 +173,12 @@
     border-radius: 0;
     border:0 none;
 }
+/* 去除圆角，底部黑边框 */
+.rm_broder_rb{
+    border-radius: 0;
+    border:1px solid black; 
+    border-style: none none solid none;
+}
 /* 重写的按钮组圆角 */
 .list-group-item:first-child{
     border-top-left-radius: 0px;
@@ -197,4 +203,14 @@
     position: relative;
     top: 50%;
     text-decoration : none
+}
+
+/* 重写popover样式 */
+.popover{
+    border-radius: 0;border:1px solid black;
+}
+
+/* 登陆框样式*/
+#lo_popover{
+    position: relative;width: 280px
 }
