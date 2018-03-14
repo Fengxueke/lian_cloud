@@ -164,6 +164,11 @@
     transform: translateY(-50%);
     text-decoration : none
 }
+/* 去除圆角 */
+.rm_radius{
+    border-radius: 0;
+}
+
 /* 去除圆角，黑色边框 */
 .rm_broder_r{
     border-radius: 0;border:1px solid black;
