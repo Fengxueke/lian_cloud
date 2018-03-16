@@ -1,0 +1,228 @@
+<html>
+
+<head>
+    <title>全部文件</title>
+    <link rel="stylesheet" href="../rescourses/css/bootstrap.css">
+    <link rel="stylesheet" href="../rescourses/style/style.css">
+    <link rel="stylesheet" href="../rescourses/css/bootstrap-table.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid" style="overflow: hidden;">
+        <div class="row">
+            <!-- 左侧栏-statr -->
+            <div class="col-md-2 main_left_usr" id="user_area">
+                用户区域
+                <div id="user_area_top" style="padding:15%">
+                    <div class="thumbnail e_vertical_user rm_broder_rn" id="user_area_icon">
+                        <a href="#">
+                            <img src="../rescourses/img/tx.jpg" alt="...">
+                        </a>
+                        <div class="caption" align="center" id="user_area_text">
+                            <a href="#">xxx</a>，欢迎你
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bg_mxain" id="user_area_down">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">文档</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">图片</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">压缩包</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">音乐</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">视频</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">其他</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 左侧栏-end -->
+            <div class="col-md-10 bg_head" id="t-head">
+                <!-- 搜索框/下载/上传/按钮-start -->
+                <div class="row" style="border:1px solid; border-style: none none solid none;">
+                    <div class="col-md-12" style="height:100px">
+                        <div class="row">
+                            <div class="col-md-5" style="height:99px; padding-left: 10px">
+                                <div style="line-height: 175px;">
+                                    面包屑>1212>hahah
+                                </div>
+
+                            </div>
+                            <div class="col-md-3" style="height:99px">
+
+                                <div class="input-group e_vertical">
+                                    <input type="text" class="form-control rm_broder_r" aria-label="...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default rm_broder_r" type="button">
+                                            <span class="glyphicon glyphicon-search" style="font-size:20px"></span>
+                                        </button>
+                                    </span>
+
+                                </div>
+                                <!-- /input-group -->
+
+                            </div>
+                            <div class="col-md-4 bg_xmain " style="height:99px">
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value=" 新建文件夹" />
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="文件上传" onclick="upload.click()" />
+                                <input type="file" id="upload" onchange="upLoadFile" style="display:none" />
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="下载" id="dpage" />
+                                <!-- Modal -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 内容区域 -->
+                <div class="row">
+                    <table data-toggle="table" data-height="600px">
+                        <thead>
+                            <tr>
+                                <th class="bs-checkbox" data-width="36px">
+                                    
+                                        <input type="checkbox" class="e_vertical"/>
+                                    
+                                </th>
+                                <th>Item Name</th>
+                                <th>Item Price</th>
+                                <th>Item ID</th>
+                                <th>Item Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" style="line-height: 45px"/>
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                            <tr>
+                                <td class="bs-checkbox">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                                <td>Item 1</td>
+                                <td>$1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script type="text/javascript" src="../rescourses/js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="../rescourses/js/cloud.js"></script>
+<script src="../rescourses/js/bootstrap.js"></script>
+<script src="../rescourses/js/layer.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="../rescourses/js/bootstrap-table/bootstrap-table.js"></script>
+
+<!-- Latest compiled and minified Locales -->
+<script src="../rescourses/js/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script>
+
+</script>
+
+</html>

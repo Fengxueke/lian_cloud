@@ -4,7 +4,7 @@
     <title>全部文件</title>
     <link rel="stylesheet" href="../rescourses/css/bootstrap.css">
     <link rel="stylesheet" href="../rescourses/style/style.css">
-    <script type="text/javascript" src="../rescourses/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../rescourses/js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="../rescourses/js/cloud.js"></script>
 </head>
 
@@ -63,18 +63,11 @@
 
                             </div>
                             <div class="col-md-4 bg_xmain " style="height:99px">
-                                <button class="btn btn-default  e_vertical rm_broder_r" type="button">
-                                    新建文件夹
-                                </button>
-                                <button class="btn btn-default  e_vertical rm_broder_r" type="button">
-                                    文件上传
-                                </button>
-                                <button class="btn btn-default  e_vertical rm_broder_r" type="button">
-                                    下载
-                                </button>
-
-
-
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value=" 新建文件夹" />
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="文件上传" onclick="upload.click()" />
+                                <input type="file" id="upload" onchange="upLoadFile" style="display:none" />
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="下载" id="dpage" />
+                                <!-- Modal -->
                             </div>
 
                         </div>
@@ -1040,6 +1033,129 @@
 
 
 </body>
+<div id="myModal" class="container-fluid hidden">
+    <div class="row">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr class="row">
+                    <th class="col-md-1">icon</th>
+                    <th class="col-md-4">文件名</th>
+                    <th class="col-md-2">文件大小</th>
+                    <th class="col-md-2">上传目录</th>
+                    <th class="col-md-3">状态</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row">
+                    <td class="col-md-1">icon</td>
+                    <td class="col-md-4"> 文件名</td>
+                    <td class="col-md-2">文件大小</td>
+                    <td class="col-md-2">上传目录</td>
+                    <td class="col-md-3">状态</td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1">icon</td>
+                    <td class="col-md-4"> 文件名</td>
+                    <td class="col-md-2">文件大小</td>
+                    <td class="col-md-2">上传目录</td>
+                    <td class="col-md-3">状态</td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1">icon</td>
+                    <td class="col-md-4"> 文件名</td>
+                    <td class="col-md-2">文件大小</td>
+                    <td class="col-md-2">上传目录</td>
+                    <td class="col-md-3">状态</td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1">icon</td>
+                    <td class="col-md-4"> 文件名</td>
+                    <td class="col-md-2">文件大小</td>
+                    <td class="col-md-2">上传目录</td>
+                    <td class="col-md-3">状态</td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1">icon</td>
+                    <td class="col-md-4"> 文件名</td>
+                    <td class="col-md-2">文件大小</td>
+                    <td class="col-md-2">上传目录</td>
+                    <td class="col-md-3">状态</td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1">icon</td>
+                    <td class="col-md-4"> 文件名</td>
+                    <td class="col-md-2">文件大小</td>
+                    <td class="col-md-2">上传目录</td>
+                    <td class="col-md-3">状态</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col-md-1 upload_title" style="text-align: center;">icon</div>
+        <div class="col-md-4 upload_title">文件名</div>
+        <div class="col-md-2 upload_title">文件大小</div>
+        <div class="col-md-2 upload_title">上传目录</div>
+        <div class="col-md-3 upload_title">状态</div>
+    </div>
+    <div class="row">
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <li class="clearfix" style="border:1px solid #ccc; border-style: none none solid none;">
+                <div class="col-md-1" style="height:40px; font-size: 15px; line-height: 40px; text-align: center;">图标</div>
+                <div class="col-md-4" style="height:40px; font-size: 15px; line-height: 40px;">文件名</div>
+                <div class="col-md-2" style="height:40px; font-size: 15px; line-height: 40px;">文件大小</div>
+                <div class="col-md-2" style="height:40px; font-size: 15px; line-height: 40px;">上传目录</div>
+                <div class="col-md-3" style="height:40px; font-size: 15px; line-height: 40px;">状态</div>
+
+            </li>
+            <li class="clearfix" style="border:1px solid #ccc; border-style: none none solid none;">
+                <div class="col-md-1" style="height:40px; font-size: 15px; line-height: 40px; text-align: center;">图标</div>
+                <div class="col-md-4" style="height:40px; font-size: 15px; line-height: 40px;">文件名</div>
+                <div class="col-md-2" style="height:40px; font-size: 15px; line-height: 40px;">文件大小</div>
+                <div class="col-md-2" style="height:40px; font-size: 15px; line-height: 40px;">上传目录</div>
+                <div class="col-md-3" style="height:40px; font-size: 15px; line-height: 40px;">状态</div>
+
+            </li>
+            <li class="clearfix" style="border:1px solid #ccc; border-style: none none solid none;">
+                <div class="col-md-1" style="height:40px; font-size: 15px; line-height: 40px; text-align: center;">图标</div>
+                <div class="col-md-4" style="height:40px; font-size: 15px; line-height: 40px;">文件名</div>
+                <div class="col-md-2" style="height:40px; font-size: 15px; line-height: 40px;">文件大小</div>
+                <div class="col-md-2" style="height:40px; font-size: 15px; line-height: 40px;">上传目录</div>
+                <div class="col-md-3" style="height:40px; font-size: 15px; line-height: 40px;">状态</div>
+
+            </li>
+            <li class="clearfix" style="border:1px solid #ccc; border-style: none none solid none;">
+                <div class="col-md-1" style="height:40px; font-size: 15px; line-height: 40px; text-align: center;">图标</div>
+                <div class="col-md-4" style="height:40px; font-size: 15px; line-height: 40px;">文件名</div>
+                <div class="col-md-2" style="height:40px; font-size: 15px; line-height: 40px;">文件大小</div>
+                <div class="col-md-2" style="height:40px; font-size: 15px; line-height: 40px;">上传目录</div>
+                <div class="col-md-3" style="height:40px; font-size: 15px; line-height: 40px;">状态</div>
+
+            </li>
+        </ul>
+    </div> -->
+</div>
 <script src="../rescourses/js/bootstrap.js"></script>
+<script src="../rescourses/js/layer.js"></script>
+<script>
+    $("#dpage").on("click", function () {
+        layer.open({
+            title: '文件上传', content: $('#myModal'),
+            fixed: true,
+            anim: 2,
+            offset: 'b',
+            shade: 0,
+            type: 1,
+            maxmin: true,
+            move: false,
+            resize: false,
+            area: ['1000px', '200px']
+        }),
+            $("#myModal").removeClass("hidden");
+    })
+
+
+</script>
 
 </html>

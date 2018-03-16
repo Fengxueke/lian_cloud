@@ -219,3 +219,12 @@
 #lo_popover{
     position: relative;width: 280px
 }
+
+/* 上传框样式 */
+.upload_title{
+    height:40px; background: #eee; 
+    font-size: 15px; 
+    line-height: 40px;  
+    font-weight: bold; 
+
+}
