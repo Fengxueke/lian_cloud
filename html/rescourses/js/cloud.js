@@ -47,3 +47,21 @@ $(window).resize(function () {
 });
 
 
+//layer活动窗口控制
+$("#dpage").on("click", function () {
+    layer.open({
+        title: '文件上传', content: $('#myModal'),
+        fixed: true,
+        anim: 2,
+        offset: 'b',
+        shade: 0,
+        type: 1,
+        maxmin: true,
+        move: false,
+        resize: false,
+        area: ['1000px', '200px']
+    }),
+        $("#myModal").removeClass("hidden");
+})
+
+
