@@ -3,7 +3,9 @@
 <head>
     <title>全部文件</title>
     <link rel="stylesheet" href="../rescourses/css/bootstrap.css">
+    <link rel="stylesheet" href="../rescourses/css/font-awesome.min.css" >
     <link rel="stylesheet" href="../rescourses/style/style.css">
+
 </head>
 
 <body>
@@ -25,7 +27,9 @@
                 </div>
                 <div class="bg_mxain" id="user_area_down">
                     <div class="list-group">
-                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">文档</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">文档
+                            <li class="fa file fa-1x"></li>
+                        </button>
                         <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">图片</button>
                         <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">压缩包</button>
                         <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">音乐</button>
@@ -63,7 +67,7 @@
                             <div class="col-md-4 bg_xmain " style="height:99px">
                                 <input class="btn btn-default  e_vertical rm_broder_r" type="button" value=" 新建文件夹" />
                                 <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="文件上传" onclick="upload.click()" />
-                                <input type="file" id="upload" onchange="upLoadFile" style="display:none" />
+                                <input type="file" id="upload" onchange="toList()" multiple="multiple" style="display:none" />
                                 <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="下载" id="dpage" />
                                 <!-- Modal -->
                             </div>
@@ -113,11 +117,11 @@
                                             </div>
                                             <div class="col-md-1 center-block t-body-icon">
                                                 <a href="#">
-                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                    <span class="fa fa-file-word-o"></span>
                                                 </a>
                                             </div>
-                                            <div class="col-md-5 t-body-file-e">
-                                                <a href="#" class="center-block file-head">文件名</a>
+                                            <div class="col-md-5 t-body-file-e filename-div-l">
+                                                <a href="#" class="center-block file-head filename-l">___Z0DL7WuSuuhu_g0gLPBkQW7E9e_5H3r_uTc7fT6ZYAgAASAEAAEpQ.jpg  </a>
                                             </div>
                                             <div class="col-md-2 t-body-file-e">
                                                 <div class="file-head t-body-operate">
@@ -1036,56 +1040,16 @@
         <table class="table table-bordered table-condensed">
             <thead>
                 <tr class="row">
-                    <th class="col-md-1">icon</th>
+                    <th class="col-md-1" style="text-align: center; vertical-align: middle">icon</th>
                     <th class="col-md-4">文件名</th>
                     <th class="col-md-2">文件大小</th>
                     <th class="col-md-2">上传目录</th>
                     <th class="col-md-3">状态</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="row">
-                    <td class="col-md-1">icon</td>
-                    <td class="col-md-4"> 文件名</td>
-                    <td class="col-md-2">文件大小</td>
-                    <td class="col-md-2">上传目录</td>
-                    <td class="col-md-3">状态</td>
-                </tr>
-                <tr class="row">
-                    <td class="col-md-1">icon</td>
-                    <td class="col-md-4"> 文件名</td>
-                    <td class="col-md-2">文件大小</td>
-                    <td class="col-md-2">上传目录</td>
-                    <td class="col-md-3">状态</td>
-                </tr>
-                <tr class="row">
-                    <td class="col-md-1">icon</td>
-                    <td class="col-md-4"> 文件名</td>
-                    <td class="col-md-2">文件大小</td>
-                    <td class="col-md-2">上传目录</td>
-                    <td class="col-md-3">状态</td>
-                </tr>
-                <tr class="row">
-                    <td class="col-md-1">icon</td>
-                    <td class="col-md-4"> 文件名</td>
-                    <td class="col-md-2">文件大小</td>
-                    <td class="col-md-2">上传目录</td>
-                    <td class="col-md-3">状态</td>
-                </tr>
-                <tr class="row">
-                    <td class="col-md-1">icon</td>
-                    <td class="col-md-4"> 文件名</td>
-                    <td class="col-md-2">文件大小</td>
-                    <td class="col-md-2">上传目录</td>
-                    <td class="col-md-3">状态</td>
-                </tr>
-                <tr class="row">
-                    <td class="col-md-1">icon</td>
-                    <td class="col-md-4"> 文件名</td>
-                    <td class="col-md-2">文件大小</td>
-                    <td class="col-md-2">上传目录</td>
-                    <td class="col-md-3">状态</td>
-                </tr>
+            <tbody id="file_list">
+
+
             </tbody>
         </table>
     </div>
@@ -1139,8 +1103,27 @@
 <script type="text/javascript" src="../rescourses/js/bootstrap.js"></script>
 <script type="text/javascript" src="../rescourses/js/layer.js"></script>
 <script>
-    
 
+Date.prototype.Format = function (fmt) { // author: meizz
+  var o = {
+      "M+": this.getMonth() + 1, // 月份
+      "d+": this.getDate(), // 日
+      "H+": this.getHours(), // 小时
+      "m+": this.getMinutes(), // 分
+      "s+": this.getSeconds(), // 秒
+      "q+": Math.floor((this.getMonth() + 3) / 3), // 季度
+      "S": this.getMilliseconds() // 毫秒
+  };
+  if (/(y+)/.test(fmt))
+      fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+  for (var k in o)
+      if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+          return fmt;
+}
+window.onload = function(){
+  var kaoqinTime = new Date().Format("yyyy-MM-dd HH:mm:ss"); 
+  console.log("----------->"+ kaoqinTime);
+}
 
 </script>
 
