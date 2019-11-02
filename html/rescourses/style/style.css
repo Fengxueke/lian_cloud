@@ -187,6 +187,10 @@
     border:1px solid black; 
     border-style: none none solid none;
 }
+/* 按钮hover样式 */
+.btn_hover:hover{
+    border-radius: 0;border:1px solid black;
+}
 /* 重写的按钮组圆角 */
 .list-group-item:first-child{
     border-top-left-radius: 0px;
@@ -230,4 +234,16 @@
     line-height: 40px;  
     font-weight: bold; 
 
+}
+
+/* 标记文件样式 */
+.icon_marked{
+    color:#FFD700;
+}
+
+/* 上传文件名过长省略 */
+.up_file_name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

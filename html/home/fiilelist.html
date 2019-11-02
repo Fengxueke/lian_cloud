@@ -1,9 +1,10 @@
 <html>
 
 <head>
+    <meta charset=UTF-8 />
     <title>全部文件</title>
     <link rel="stylesheet" href="../rescourses/css/bootstrap.css">
-    <link rel="stylesheet" href="../rescourses/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../rescourses/css/font-awesome.min.css">
     <link rel="stylesheet" href="../rescourses/style/style.css">
 
 </head>
@@ -44,9 +45,24 @@
                 <div class="row">
                     <div class="col-md-12" style="height:100px">
                         <div class="row">
-                            <div class="col-md-5" style="height:99px; padding-left: 10px">
-                                <div style="line-height: 175px;">
-                                    面包屑>1212>hahah
+                            <div class="col-md-5" style="height:99px; padding-left: 0px">
+                                <div>
+                                    <ul class="breadcrumb col-xs-2" style="background: #ffffff;margin-top: 65px;padding-right: 0;margin-right: 0;width: auto;">
+                                        <li>
+                                            <a href="#">全部文件</a>
+                                        </li>
+                                        <li style="padding: 0;margin: 0"></li>
+                                    </ul>
+                                    <ul id="folder_nav" class="breadcrumb col-xs-7" style="padding-left: 0;margin-left: 0;white-space:nowrap;margin-top:65px;margin-bottom:0; background: #ffffff">
+
+                                    </ul>
+                                    <ul id="back" class="breadcrumb col-xs-1" style="padding-left: 0;margin-left: 0;white-space:nowrap;margin-top:70px;margin-bottom:0; background: #ffffff">
+                                        <li>
+                                            <a href="#">
+                                                <span class="fa fa-lg fa-arrow-circle-up"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
 
                             </div>
@@ -65,7 +81,7 @@
 
                             </div>
                             <div class="col-md-4 bg_xmain " style="height:99px">
-                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value=" 新建文件夹" />
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" onclick="newFolder()" value=" 新建文件夹" />
                                 <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="文件上传" onclick="upload.click()" />
                                 <input type="file" id="upload" onchange="toList()" multiple="multiple" style="display:none" />
                                 <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="下载" id="dpage" />
@@ -121,17 +137,19 @@
                                                 </a>
                                             </div>
                                             <div class="col-md-5 t-body-file-e filename-div-l">
-                                                <a href="#" class="center-block file-head filename-l">___Z0DL7WuSuuhu_g0gLPBkQW7E9e_5H3r_uTc7fT6ZYAgAASAEAAEpQ.jpg  </a>
+                                                <a href="javascript:void(0);" class="center-block file-head filename" title="aaaaaa">
+                                                    ___Z0DL7WuSuuhu_g0gLPBkQW7E9e_5H3r_uTc7fT6ZYAgAASAEAAEpQ.jpg
+                                                </a>
                                             </div>
                                             <div class="col-md-2 t-body-file-e">
                                                 <div class="file-head t-body-operate">
-                                                    <a href="#">
-                                                        <span class="glyphicon glyphicon-star"></span>
+                                                    <a class="marking" href="#">
+                                                        <span class="glyphicon glyphicon-star icon_marked"></span>
                                                     </a>
-                                                    <a href="#">
+                                                    <a href="javascript:return false;">
                                                         <span class="glyphicon glyphicon-download"></span>
                                                     </a>
-                                                    <a href="#">
+                                                    <a href="#" class="share_link">
                                                         <span class="glyphicon glyphicon-share"></span>
                                                     </a>
                                                     <a href="#">
@@ -156,7 +174,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-md-5  t-body-file-e">
-                                                <a href="#" class="center-block file-head">文件名</a>
+                                                <a href="javascript:void(0);" class="center-block file-head filename" title="aaaxaaaa">文件名</a>
                                             </div>
                                             <div class="col-md-2  t-body-file-e">
                                                 <div class="file-head t-body-operate">
@@ -191,11 +209,11 @@
                                                 </a>
                                             </div>
                                             <div class="col-md-5 t-body-file-e">
-                                                <a href="#" class="center-block file-head">文件名</a>
+                                                <a href="javascript:void(0);" class="center-block file-head filename" title="axxxaaaaa">文件名9</a>
                                             </div>
                                             <div class="col-md-2 t-body-file-e">
                                                 <div class="file-head t-body-operate">
-                                                    <a href="#">
+                                                    <a class="marking" href="#">
                                                         <span class="glyphicon glyphicon-star"></span>
                                                     </a>
                                                     <a href="#">
@@ -230,7 +248,7 @@
                                             </div>
                                             <div class="col-md-2  t-body-file-e">
                                                 <div class="file-head t-body-operate">
-                                                    <a href="#">
+                                                    <a class="marking" href="#">
                                                         <span class="glyphicon glyphicon-star"></span>
                                                     </a>
                                                     <a href="#">
@@ -1098,32 +1116,194 @@
         </ul>
     </div> -->
 </div>
+<div id="newfolder" class="container-fluid hidden" style="padding-top: 10px">
+    <form class="form-horizontal" style="margin-bottom: 0">
+        <div class="form-group has-info has-feedback" style="margin-bottom: 0">
+            <label class="col-xs-3 control-label" style="padding-right:0">文件夹名称:</label>
+            <div class="col-xs-6" style="padding-right:0">
+                <input id="foldername" class="form-control rm_radius rm_broder_r" type="text" />
+            </div>
+            <div class="col-xs-3" style="padding-right:0">
+                <input class="btn btn-default rm_broder_r btn_hover" type="button" value="确定" disabled/>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="share_content" class="hidden" style="padding:20px;">
+</div>
+
 <script type="text/javascript" src="../rescourses/js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="../rescourses/js/cloud.js"></script>
 <script type="text/javascript" src="../rescourses/js/bootstrap.js"></script>
+<script type="text/javascript" src="../rescourses/js/momen.min.js"></script>
 <script type="text/javascript" src="../rescourses/js/layer.js"></script>
 <script>
 
-Date.prototype.Format = function (fmt) { // author: meizz
-  var o = {
-      "M+": this.getMonth() + 1, // 月份
-      "d+": this.getDate(), // 日
-      "H+": this.getHours(), // 小时
-      "m+": this.getMinutes(), // 分
-      "s+": this.getSeconds(), // 秒
-      "q+": Math.floor((this.getMonth() + 3) / 3), // 季度
-      "S": this.getMilliseconds() // 毫秒
-  };
-  if (/(y+)/.test(fmt))
-      fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-  for (var k in o)
-      if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-          return fmt;
-}
-window.onload = function(){
-  var kaoqinTime = new Date().Format("yyyy-MM-dd HH:mm:ss"); 
-  console.log("----------->"+ kaoqinTime);
-}
+    Date.prototype.Format = function (fmt) { // author: meizz
+        var o = {
+            "M+": this.getMonth() + 1, // 月份
+            "d+": this.getDate(), // 日
+            "H+": this.getHours(), // 小时
+            "m+": this.getMinutes(), // 分
+            "s+": this.getSeconds(), // 秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), // 季度
+            "S": this.getMilliseconds() // 毫秒
+        };
+        if (/(y+)/.test(fmt))
+            fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+    window.onload = function () {
+        var kaoqinTime = new Date().Format("yyyy-MM-dd HH:mm:ss");
+        console.log("----------->" + kaoqinTime);
+    }
+
+    function newFolder() {
+        layer.open({
+            title: '新建文件夹', content: $('#newfolder'),
+            fixed: true,
+            anim: 2,
+            offset: 'auto',
+            shade: 0,
+            type: 1,
+            move: false,
+            resize: false,
+            area: ['400', '100px'],
+            success: function (layero, index) {
+                $(document).on("keydown", function (e) {
+                    if (e.keyCode == 13) {
+                        return false;
+                    }
+                })
+            }
+        });
+        $('#newfolder').removeClass("hidden");
+    }
+
+    function sb_folder() {
+        layer.tips('文件夹名称重复！', '#foldername', { tips: 3 });
+    }
+
+
+    $(document).on("click", ".filename", function () {
+        //$(this).attr("title")
+        console.log($(this).text().length);
+        var nav_li_width;
+        if ($(this).text().length > 15) {
+            nav_li_width = "70px";
+        } else {
+            nav_li_width = "auto"
+        }
+        var folder_li = "<li style='width:" + nav_li_width + ";overflow:hidden;text-overflow: ellipsis;'><a href='#' class='nav_files' title='" + $(this).text() + "'>" + $(this).text() + "</a></li>";
+        $("#folder_nav").append(folder_li);
+        var f_length = $("#folder_nav").find("li").length;
+        var xxf = $("#folder_nav").find("li")[f_length - 2];
+        //$(xxf).removeClass("active");
+        $(xxf).html("<a href='#' class='nav_files' title='" + $(xxf).text() + "'>" + $(xxf).text() + "</a>");
+
+        //获取所有li
+        var all_li = $("#folder_nav").find("li");
+        var all_li_length = 0;
+        for (var i = 0; i < all_li.length; i++) {
+            all_li_length = all_li_length + $(all_li[i]).width();
+        }
+
+        if (all_li_length > $("#folder_nav").width()) {
+            var xxb = $("#folder_nav").find("li")[f_length - 1];
+            //$(xxb).parent().prev().replaceWith("...")
+            for (var i = f_length - 3; i >= 0; i--) {
+                $(all_li[i]).remove();
+            }
+            $(xxb).parent().prepend("<li style='width:auto;overflow:hidden;text-overflow: ellipsis;'>...</li>");
+        }
+
+
+        console.log(all_li_length);
+
+
+        console.log($("#folder_nav").find("li")[f_length - 2]);
+    });
+    $(document).on("click", ".marking", function () {
+
+        if ($(this).children("span").hasClass("icon_marked")) {
+            $(this).children("span").removeClass("icon_marked");
+        } else {
+            $(this).children("span").addClass("icon_marked");
+            $(this).removeAttr("href");
+        }
+    });
+
+    //分享按钮的点击
+    $(document).on("click", ".share_link", function () {
+
+        var share_link = "";
+        var content = "<div class='container-fluid'><div class='row' style='height:200px'>"
+            + "<div class='col-xs-4' style='background:#ccc;height:250px' align='center'><span class='fa fa-file-word-o e_vertical' style='font-size:125px'></span></div>"
+            + "<div class='col-xs-4' style='background:#ddd;height:250px'><div class='e_vertical'>"
+            + "<div class='form-horizontal'><div class='form-group' style='margin-bottom:10px'>"
+            + "<label class='col-sm-4 control-label' style='padding-right:0;text-align:center'>文件名称：</label> <div class='col-sm-7' style='padding:0'>"
+            + "<p class='form-control-static up_file_name' id='exampleInputName2'>13131sssssssssssssssssss32231221321ddddd</p>"
+            + "</div></div></div>"
+            + "<div class='form-horizontal'><div class='form-group' style='margin-bottom:10px'>"
+            + "<label class='col-sm-4 control-label' style='padding-right:0;text-align:center'>所属用户：</label> <div class='col-sm-7' style='padding:0'>"
+            + "<p class='form-control-static up_file_name' id='exampleInputName2'>13131sssssssssssssssssss32231221321ddddd</p>"
+            + "</div></div></div>"
+            + "<div class='form-horizontal'><div class='form-group' style='margin-bottom:10px'>"
+            + "<label class='col-sm-4 control-label' style='padding-right:0;text-align:center'>文件大小：</label> <div class='col-sm-7' style='padding:0'>"
+            + "<p class='form-control-static up_file_name' id='exampleInputName2'>13131sssssssssssssssssss32231221321ddddd</p>"
+            + "</div></div></div>"
+            + "<div class='form-horizontal'><div class='form-group' style='margin-bottom:10px'>"
+            + "<label class='col-sm-4 control-label' style='padding-right:0;text-align:center'>文件类型：</label> <div class='col-sm-7' style='padding:0'>"
+            + "<p class='form-control-static up_file_name' id='exampleInputName2'>13131sssssssssssssssssss32231221321ddddd</p>"
+            + "</div></div></div>"
+            + "</div></div>"
+
+            + "<div class='col-xs-4' style='background:#ddd;height:250px'><div class='e_vertical'>"
+            + "<div class='form-horizontal'><div class='form-group' style='margin-bottom:10px'>"
+            + "<label class='col-sm-4 control-label' style='padding-right:0;text-align:center'>路&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;径：</label> <div class='col-sm-7' style='padding:0'>"
+            + "<p class='form-control-static up_file_name' id='exampleInputName2'>13131sssssssssssssssssss32231221321ddddd</p>"
+            + "</div></div></div>"
+            + "<div class='form-horizontal'><div class='form-group' style='margin-bottom:10px'>"
+            + "<label class='col-sm-4 control-label' style='padding-right:0;text-align:center'>修改日期：</label> <div class='col-sm-7' style='padding:0'>"
+            + "<p class='form-control-static up_file_name' id='exampleInputName2'>13131sssssssssssssssssss32231221321ddddd</p>"
+            + "</div></div></div>"
+            + "<div class='form-horizontal'><div class='form-group' style='margin-bottom:10px'>"
+            + "<label class='col-sm-4 control-label' style='padding-right:0;text-align:center'>是否标记：</label> <div class='col-sm-7' style='padding:0'>"
+            + "<p class='form-control-static up_file_name' id='exampleInputName2'>13131sssssssssssssssssss32231221321ddddd</p>"
+            + "</div></div></div>"
+            + "<div class='form-horizontal'><div class='form-group' style='margin-bottom:10px'>"
+            + "<label class='col-sm-4 control-label' style='padding-right:0;text-align:center'>下载链接：</label> <div class='col-sm-7' style='padding:0'>"
+            + "<p class='form-control-static up_file_name' id='exampleInputName2'>13131sssssssssssssssssss32231221321ddddd</p>"
+            + "</div></div></div>"
+            + "</div>"
+            + "</div></div></div>";
+        layer.open({
+            type: 1,
+            title: false,
+            content: content,
+            area: ['800px', 'auto'],
+        });
+
+    });
+
+
+    $(document).on("click", "#copy_link", function () {
+        if (document.execCommand("Copy", "false", null)) {
+            layer.msg("复制成功！",{time: 2000});
+        }
+        return false;
+        
+
+    });
+
+
+
+
+
+//moment.unix(result[i].filetime).format("yyyy-MM-dd HH:mm:ss")
+
 
 </script>
 
