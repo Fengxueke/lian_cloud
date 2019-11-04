@@ -156,7 +156,7 @@
     position: absolute;top: 50%;transform: translateY(-50%)
 }
 .filename-l{
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:90%
 }
 /* 文件-内容部分 end */
 
