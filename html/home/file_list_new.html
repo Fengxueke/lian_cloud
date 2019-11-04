@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <meta charset=UTF-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全部文件</title>
+    <link rel="stylesheet" href="../rescourses/js-bootstrap-new/css/bootstrap.css">
+    <link rel="stylesheet" href="../rescourses/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../rescourses/style/style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid" style="overflow: hidden;">
+        
+        <div class="row d-lg-none" style="height: 20x">用户区域2 小屏幕</div>
+        <div class="row" style="height: 500px">
+            <!-- 左侧栏-statr -->
+            <div class=" col-lg-2 d-none d-lg-block"  style="border:1px solid red; background: #CCC" id="user_area">
+                用户区域 大屏幕
+                <div class="">
+                    <div class="" id="user_area_icon">
+                        
+                    </div>
+
+                </div>
+                <div class="" id="user_area_down">
+                    
+                </div>
+            </div>
+            <!-- 左侧栏-end -->
+            <div class="col-lg-10"  style="border:1px solid red; background: #8c97be" id="t-head">
+                <!-- 搜索框/下载/上传/按钮-start -->
+                <div class="row">
+                    <div class="col-12" style="border:1px solid red; background:#8cbea7; height:100px">
+                        <div class="row">
+                            <div class="col-md-4 d-none d-md-block" style="height:99px; padding-left: 0px; background: #7b81d3">
+                                全部文件
+                            </div>
+                            <div class="col-md-4" style="height:99px; background: #a7f59c">
+
+                                <div class="input-group e_vertical">
+                                    <input type="text" class="form-control rm_broder_r" aria-label="...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default rm_broder_r" type="button">
+                                            <span class="fa fa-search" style="font-size:24px"></span>
+                                        </button>
+                                    </span>
+                                    <div  class=" d-md-none rm_broder_r" style="margin-left: 5px; padding:0 6px 0 6px">
+                                        <span class="fa fa-bars fa-lg  e_vertical"></span>
+                                    </div>
+                                </div>
+                                <!-- /input-group -->
+
+                            </div>
+                            <div class="col-md-4 bg_xmain d-none d-md-block" style="height:99px; background: #909011">
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" onclick="newFolder()" value=" 新建" />
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="文件上传" onclick="upload.click()" />
+                                <input type="file" id="upload" onchange="toList()" multiple="multiple" style="display:none" />
+                                <input class="btn btn-default  e_vertical rm_broder_r" type="button" value="下载" id="dpage" />
+                                <!-- Modal -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 搜索框/下载/上传/按钮-end -->
+                <!-- xx -->
+                <div class="row">
+                    <div class="col-12">
+                        <!-- 表格字段-start -->
+                        <div class="row">
+                            <div class="col-md-12 main_right_theader">
+                                <div class="row" id="md12">
+                                    <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-header-checkbox">
+                                        <input type="checkbox" class="checkbox" />
+                                    </div>
+                                    <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-header-icon">
+                                        <a href="#" class="file-head">图标</a>
+                                    </div>
+                                    <div class="col-8 col-xs-7 col-sm-7 col-md-5  t-header-2">
+                                        <a href="#" class="center-block file-head">文件名</a>
+                                    </div>
+                                    <div class="col-4 col-md-2 col-xs-2 t-header-2">
+                                        <a href="#" class="center-block file-head">操作</a>
+                                    </div>
+                                    <div class="col-md-1  col-xs-1 d-none d-md-block t-header-2">
+                                        <a href="#" class="center-block file-head">大小</a>
+                                    </div>
+                                    <div class="col-md-2 col-xs-2 d-none d-md-block t-header-3">
+                                        <a href="#" class="center-block file-head">修改日期</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- 表格字段-end -->
+                                <!-- 内容-start -->
+                                <div class="row" id="">
+                                    <div class="col-md-12" id="scolls">
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- 内容-end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
