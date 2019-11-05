@@ -13,19 +13,33 @@
 <body>
     <div class="container-fluid" style="overflow: hidden;">
         
-        <div class="row d-lg-none" style="height: 20x">用户区域2 小屏幕</div>
-        <div class="row" style="height: 500px">
+        <div class="row d-lg-none">用户区域2 小屏幕</div>
+        <div class="row">
             <!-- 左侧栏-statr -->
-            <div class=" col-lg-2 d-none d-lg-block"  style="border:1px solid red; background: #CCC" id="user_area">
+            <div class=" col-lg-2 d-none d-lg-block main_left_usr"  style="border:1px solid red;" id="user_area">
                 用户区域 大屏幕
-                <div class="">
-                    <div class="" id="user_area_icon">
-                        
+                <div id="user_area_top" style="padding:15%">
+                    <div class="card e_vertical_user rm_broder_rn" id="user_area_icon">
+                        <a href="#">
+                            <img class="card-img" src="../rescourses/img/tx.jpg" alt="...">
+                        </a>
+                        <div class="card-body" align="center" id="user_area_text">
+                            <a href="#">xxx</a>，欢迎你
+                        </div>
                     </div>
 
                 </div>
-                <div class="" id="user_area_down">
-                    
+                <div class="bg_mxain" id="user_area_down">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">文档
+                            <li class="fa file fa-1x"></li>
+                        </button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">图片</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">压缩包</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">音乐</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">视频</button>
+                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">其他</button>
+                    </div>
                 </div>
             </div>
             <!-- 左侧栏-end -->
