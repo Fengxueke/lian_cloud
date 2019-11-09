@@ -23,6 +23,9 @@ $(window).ready(function () {
     //文件名部分长度控制
     $(".filename-l").css("width",$(".filename-div-l").width() + "px");
 
+    console.log("表区域高度-1->", $(window).height());
+    console.log("表区域高度-scrolls->", $(window).height() - 101 - $("#md12").height());
+
 });
 
 

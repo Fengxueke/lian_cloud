@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="overflow: hidden;">
+    <div class="container-fluid" style="overflow: hidden; height: 100%;">
         
         <div class="row d-lg-none">用户区域2 小屏幕</div>
         <div class="row">
             <!-- 左侧栏-statr -->
-            <div class=" col-lg-2 d-none d-lg-block main_left_usr"  style="border:1px solid red;" id="user_area">
+            <div class=" col-lg-2 d-none d-lg-block main_left_usr"  style="" id="user_area">
                 用户区域 大屏幕
                 <div id="user_area_top" style="padding:15%">
                     <div class="card e_vertical_user rm_broder_rn" id="user_area_icon">
@@ -31,22 +31,22 @@
                 </div>
                 <div class="bg_mxain" id="user_area_down">
                     <div class="list-group">
-                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">文档
-                            <li class="fa file fa-1x"></li>
+                        <button type="button" class="list-group-item file_kind_btn_new" style="text-align: center;">文档
+                            
                         </button>
-                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">图片</button>
-                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">压缩包</button>
-                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">音乐</button>
-                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">视频</button>
-                        <button type="button" class="list-group-item file_kind_btn" style="text-align: center;">其他</button>
+                        <button type="button" class="list-group-item file_kind_btn_new" style="text-align: center;">图片</button>
+                        <button type="button" class="list-group-item file_kind_btn_new" style="text-align: center;">压缩包</button>
+                        <button type="button" class="list-group-item file_kind_btn_new" style="text-align: center;">音乐</button>
+                        <button type="button" class="list-group-item file_kind_btn_new" style="text-align: center;">视频</button>
+                        <button type="button" class="list-group-item file_kind_btn_new" style="text-align: center;">其他</button>
                     </div>
                 </div>
             </div>
             <!-- 左侧栏-end -->
-            <div class="col-lg-10"  style="border:1px solid red; background: #8c97be" id="t-head">
+            <div class="col-lg-10"  style=" background: #8c97be" id="t-head">
                 <!-- 搜索框/下载/上传/按钮-start -->
                 <div class="row">
-                    <div class="col-12" style="border:1px solid red; background:#8cbea7; height:100px">
+                    <div class="col-12" style=" background:#8cbea7; height:100px">
                         <div class="row">
                             <div class="col-md-4 d-none d-md-block" style="height:99px; padding-left: 0px; background: #7b81d3">
                                 全部文件
@@ -84,7 +84,7 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- 表格字段-start -->
-                        <div class="row">
+                        <div class="row" style="">
                             <div class="col-md-12 main_right_theader">
                                 <div class="row" id="md12">
                                     <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-header-checkbox">
@@ -105,15 +105,683 @@
                                     <div class="col-md-2 col-xs-2 d-none d-md-block t-header-3">
                                         <a href="#" class="center-block file-head">修改日期</a>
                                     </div>
+                                    <div style="width:5px;"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" style="">
                             <div class="col-12">
                                 <!-- 表格字段-end -->
                                 <!-- 内容-start -->
                                 <div class="row" id="">
-                                    <div class="col-md-12" id="scolls">
+                                    <div class="col-md-12" style="" id="scolls" >
+                                        <!-- 滚动内容 -start -->
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
+                                        <div class="row main_right_tb md-scroll">
+                                            <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
+                                                <input type="checkbox" class="checkbox" />
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 d-none d-sm-block center-block t-body-icon">
+                                                <a href="#">
+                                                    <span class="fa fa-file-word-o"></span>
+                                                </a>
+                                            </div>
+                                            <div class="col-8 col-xs-7 col-sm-7 col-md-5 t-body-file-e filename-div-l">
+                                                <a href="javascript:void(0);" class="center-block file-head filename filename-l" title="aaaaaa">
+                                                    ___Z0DL7WuSuYAgAASAEAAEpQ.jpg
+                                                </a>
+                                            </div>
+                                            <div class="col-4 col-xs-2 col-md-2 t-body-file-e">
+                                                <div class="file-head t-body-operate">
+                                                    <a class="marking" href="#">
+                                                        <span class="fa fa-star icon_marked"></span>
+                                                    </a>
+                                                    <a href="javascript:return false;">
+                                                        <span class="fa fa-download"></span>
+                                                    </a>
+                                                    <a href="#" class="share_link">
+                                                        <span class="fa fa-share"></span>
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-xs-1 d-none d-md-block t-body-file-e">                                                    
+                                                <span class="center-block t-body-size_time" style="font-size:12px">20.00MB</span>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 d-none d-md-block t-body-file-e2">
+                                                <span class="center-block t-body-size_time" style="font-size:12px">2017-12-12 12:12</span>
+                                            </div>
+                                        </div>
                                         <div class="row main_right_tb md-scroll">
                                             <div class="col-1 col-md-1 col-xs-1 d-none d-md-block center-block t-body-checkbox">
                                                 <input type="checkbox" class="checkbox" />
@@ -152,6 +820,8 @@
                                             </div>
                                         </div>
 
+                                        <!-- 滚动内容 -end -->
+
 
                                     </div>
                                 </div>
@@ -166,5 +836,10 @@
 
 
 </body>
+
+<script type="text/javascript" src="../rescourses/js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="../rescourses/js/cloud_new.js"></script>
+<script type="text/javascript" src="../rescourses/js/bootstrap.js"></script>
+
 
 </html>
